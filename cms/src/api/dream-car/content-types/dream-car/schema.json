@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dream_cars",
+  "info": {
+    "singularName": "dream-car",
+    "pluralName": "dream-cars",
+    "displayName": "DreamCar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Make": {
+      "type": "string"
+    },
+    "Model": {
+      "type": "string"
+    },
+    "Year": {
+      "type": "biginteger"
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,163 @@
+/* Set the BMW stripes as the background for the body */
+body {
+  background: linear-gradient(
+    135deg,                   /* Angle: diagonal from top-right to bottom-left */
+    #0466d4 33.33%,           /* Dark blue stripe covering 1/3 of the viewport */
+    #050065 33.33%,           /* Start purple stripe right after the blue */
+    #050065 66.66%,           /* Purple stripe ends at 2/3 of the viewport */
+    #E2062C 66.66%            /* Start red stripe */
+  );
+  background-size: 100% 100%; /* Ensure background covers the full viewport */
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  height: 100%;               /* Set body height to 100% */
+  margin: 0;
+  padding: 0;
+}
+
+/* Additional styles for the rest of the content */
+.paper {
+  background: white;                 
+  padding: 40px;                     
+  margin: 40px auto;                 
+  max-width: 800px;                  
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);  
+  border: 1px solid #ccc;            
+  position: relative;
+}
+
+.paper::before, .paper::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ddd 1px, transparent 1px);
+  background-size: 100% 20px;  
+  top: 0;
+}
+
+.paper::before {
+  left: 10px;    
+}
+
+.paper::after {
+  right: 10px;   
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+p, li {
+  line-height: 1.6;  
+  margin-bottom: 1.2em;
+}
+
+ul, ol {
+  padding-left: 20px; 
+  margin-bottom: 1.2em;
+}
+
+li {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ol ol, ul ul {
+  padding-left: 15px;
+}
+
+blockquote {
+  margin-left: 10px; 
+  padding-left: 10px;
+  border-left: 4px solid #ccc;
+  font-style: italic;
+  color: #555;
+}
+
+.container {
+  max-width: 900px;  
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  background-color: black;      
+  color: white;                 
+  padding: 10px 20px;           
+  margin: 20px 0;               
+  display: inline-block;        
+  width: 100%;                  
+  text-align: center;           
+  border-radius: 5px;           
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+}
+
+h1 {
+  font-size: 24pt;
+}
+
+/* General body and html styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Splash screen styles */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #002E63; /* Dark blue background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Make sure splash is on top */
+  transition: opacity 1s ease; /* Fade out effect */
+}
+
+/* Splash name animation */
+.splash-name {
+  font-size: 48px;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff; /* White text */
+  animation: fadeInOut 2s forwards; /* Animation effect */
+}
+
+/* Keyframes for fade in and fade out */
+@keyframes fadeInOut {
+  0% {
+      opacity: 0;
+      transform: scale(0.8); /* Slightly scale down */
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1); /* Scale to normal size */
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1.2); /* Slightly scale up */
+  }
+}
+
+/* Hide splash screen and display main content after animation */
+.splash-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+  display: none; /* Optional: hide completely */
+}
+
+.main-content {
+  display: none; /* Hide main content initially */
+  visibility: hidden;
+}
+
+.main-content.visible {
+  display: block; /* Show main content */
+  visibility: visible;
+}
+

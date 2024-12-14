@@ -1,0 +1,59 @@
+---
+pagination:
+  data: collections.strapiPosts
+  size: 1
+  alias: post
+permalink: "/blog/{{ post.slug }}/index.html"
+layout: layouts/default.hbs
+---
+<div class="container">
+  <article class="blog-post">
+    <h1>{{post.title}}</h1>
+    
+    <div class="meta text-muted mb-4">
+      {{!-- {{#if post.category}}
+        <span class="badge bg-secondary me-2">{{post.category}}</span>
+      {{/if}} --}}
+      Published: {{post.date}}
+    </div>
+
+    {{#if post.featuredImage}}
+      <div class="mb-4">
+        <img src="{{post.featuredImage}}" class="img-fluid" alt="{{post.title}}">
+      </div>
+    {{/if}}
+
+    <div class="content">
+      {{{post.content}}}
+    </div>
+
+    <nav class="blog-navigation border-top border-bottom my-5 py-4">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-5">
+          {{#if post.previousPost}}
+            <a href="{{post.previousPost.url}}" class="text-decoration-none">
+              <div class="d-flex flex-column">
+                <small class="text-muted mb-1">← Previous Post</small>
+                <span class="fw-medium text-primary">{{post.previousPost.title}}</span>
+              </div>
+            </a>
+          {{/if}}
+        </div>
+        <div class="col-md-5 text-md-end mt-3 mt-md-0">
+          {{#if post.nextPost}}
+            <a href="{{post.nextPost.url}}" class="text-decoration-none">
+              <div class="d-flex flex-column align-items-md-end">
+                <small class="text-muted mb-1">Next Post →</small>
+                <span class="fw-medium text-primary">{{post.nextPost.title}}</span>
+              </div>
+            </a>
+          {{/if}}
+        </div>
+      </div>
+    </nav>
+
+    <div class="mt-4">
+      <a href="/blog" class="btn btn-secondary">← Back to Blog</a>
+    </div>
+  </article>
+</div>

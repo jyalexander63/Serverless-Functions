@@ -1,0 +1,25 @@
+{
+  "name": "eleventy-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Jy Alexnader 100902103",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-handlebars": "^1.0.0",
+    "@sendgrid/mail": "^8.1.4",
+    "handlebars": "^4.7.8",
+    "luxon": "^3.5.0",
+    "marked": "^15.0.2"
+  },
+  "description": "",
+  "devDependencies": {
+    "fs-extra": "^11.2.0"
+  }
+}

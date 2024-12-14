@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 1 solution</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">Jy Alexander</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/README/readme.html">README</a>
+            </li>
+            <!-- Add Blog nav item here -->
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cars">Dream Cars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownL1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Lab 1
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownL1">
+                <li><a class="dropdown-item" href="/1_lab_solution/solution.html">Write-up</a></li>
+                <li><a class="dropdown-item" href="/1_lab_references/references.html">References</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownL1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Lab 3
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownL1">
+                <li><a class="dropdown-item" href="/lab3/lab3.html">Write-up</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownA1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Assignment 1
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownA1">
+                <li><a class="dropdown-item" href="/about.html">About Me</a></li>
+                <li><a class="dropdown-item" href="/404.html">404 Page</a></li>
+                <li><a class="dropdown-item" href="/terms-and-conditions.html">Terms & Conditions</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container my-5">
+      <div class="paper">
+        <h1>Static Site Generation Experience</h1>
+<p><strong>Author:</strong> Jy Alexander
+<strong>Date:</strong> September 15th, 2024</p>
+<h2>Introduction</h2>
+<p>This lab focuses on using SSG tools and templating engines to build a simple site. I explored different template engines and worked with the 11ty static site generator.</p>
+<h2>Template Engines Comparison</h2>
+<p>During this lab, I researched three template engines that work with SSG tools:</p>
+<ol>
+<li>
+<p><strong>Nunjucks</strong></p>
+<ul>
+<li>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Simple syntax thats easy for beginners.</li>
+<li>Support for custom filters and tags.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Limited features in comparison to other feature-rich templating engines.</li>
+<li>Not as fast as other templating engines.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Pug</strong></p>
+<ul>
+<li>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Supports partials and Layouts.</li>
+<li>Clean syntax that reduces HTML boilerplate.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>There is some performance overhead</li>
+<li>Hard for beginners to debug because of its syntaxx</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Handlebars</strong></p>
+<ul>
+<li>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Highly Readable syntax</li>
+<li>Large community with lots of open-source resources.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Learning curve for beginners</li>
+<li>Limited built-in features</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3>Choice of Template Engine</h3>
+<p>For this lab, I chose <strong>Nunjucks</strong> mainly because it was the most recent templating engine shown in class.</p>
+<h2>SSG Applications Comparison</h2>
+<p>While 11ty is the focus of this lab, SSG tools i found that are popular in the development community are:</p>
+<ol>
+<li>
+<p><strong>Hugo</strong></p>
+<ul>
+<li>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>straight forward layout</li>
+<li>Faster than other static site generator applications.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Big learning curve for beginners</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Jekyll</strong></p>
+<ul>
+<li>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>faster website loading time because there is no need for database access.</li>
+<li>Greater stability and Security since the web server only has to deliver text files instead of several different components interacting with each other.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>No server-side scripting.</li>
+<li>No graphical user interface (GUI) by default.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2>11ty Configuration</h2>
+<p>I explored the <a href="https://www.11ty.dev/docs/config/">11ty configuration documentation</a>. Key settings include:</p>
+<ol>
+<li>
+<p><strong>Directory Structure</strong>:</p>
+<ul>
+<li>11ty uses a default directory structure, which places content in a <code>_site</code> folder.</li>
+</ul>
+</li>
+<li>
+<p><strong>Passthrough File Copy</strong>:</p>
+<ul>
+<li>This feature allows static assets (like images or CSS) to be copied directly to the output folder without processing. I used this so my assets were transferred without modification.</li>
+</ul>
+</li>
+<li>
+<p><strong>Markdown Parsing</strong>:</p>
+<ul>
+<li>I configured 11ty to parse Markdown files using its default markdown-it parser, because it offers flexibility in rendering Markdown content.</li>
+</ul>
+</li>
+</ol>
+<h3>Additional Settings to Explore</h3>
+<ul>
+<li><strong>Template Formats</strong>: 11ty supports multiple formats like Markdown, Liquid, and Pug. Exploring multiple formats could be useful for larger projects more complex projects.</li>
+<li><strong>Collections</strong>: This feature allows grouping of content, which could be useful for organizing blogs or posts on a website.</li>
+</ul>
+<h2>Front Matter</h2>
+<p><strong>Front Matter</strong> is metadata placed at the top of content files (such as Markdown files), between <code>---</code> delimiters. It defines properties like title, layout, or date for the page. For example:</p>
+<pre><code class="language-yaml">---
+title: &quot;My First Post&quot;
+layout: &quot;default.njk&quot;
+date: &quot;2024-09-15&quot;
+---
+</code></pre>
+<h2>References</h2>
+<li><a href="/1_lab_references/references.html">References</a></li>
+      </div>
+    </div>
+    
+    <footer class="footer bg-dark text-center text-white py-4">
+      <div class="container">
+        <p>&copy; Jy Alexander <span id="current-year"></span></p>
+         <p><a href="/terms-and-conditions.html" class="text-white">Terms and Conditions</a></p>
+      </div>
+    </footer>
+    
+    <script>
+      // JavaScript to update the year dynamically
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="/js/splash.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

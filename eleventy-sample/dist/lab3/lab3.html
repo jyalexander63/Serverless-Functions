@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 3 solution</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">Jy Alexander</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/README/readme.html">README</a>
+            </li>
+            <!-- Add Blog nav item here -->
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cars">Dream Cars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownL1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Lab 1
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownL1">
+                <li><a class="dropdown-item" href="/1_lab_solution/solution.html">Write-up</a></li>
+                <li><a class="dropdown-item" href="/1_lab_references/references.html">References</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownL1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Lab 3
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownL1">
+                <li><a class="dropdown-item" href="/lab3/lab3.html">Write-up</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownA1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Assignment 1
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownA1">
+                <li><a class="dropdown-item" href="/about.html">About Me</a></li>
+                <li><a class="dropdown-item" href="/404.html">404 Page</a></li>
+                <li><a class="dropdown-item" href="/terms-and-conditions.html">Terms & Conditions</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container my-5">
+      <div class="paper">
+        <h1>Serverless Function Providers Comparison</h1>
+<h2>Overview</h2>
+<p>Serverless functions allow developers to run code without managing infrastructure. They are event-driven, meaning they only execute in response to events and scale automatically. Below is a comparison of several popular serverless function providers, detailing their key features, pricing models, and use cases.</p>
+<h3>AWS Lambda</h3>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Languages Supported:</strong> Node.js, Python, Java, C#, Go, Ruby, and custom runtimes.</li>
+<li><strong>Integration:</strong> Deep integration with the AWS ecosystem (e.g., S3, DynamoDB, API Gateway, CloudWatch).</li>
+<li><strong>Scalability:</strong> Automatic and highly flexible scaling.</li>
+<li><strong>Deployment:</strong> Can be managed via AWS CLI, SDKs, or infrastructure-as-code tools like AWS CloudFormation and Terraform.</li>
+</ul>
+<p><strong>Pricing:</strong></p>
+<ul>
+<li><strong>Free Tier:</strong> 1 million free requests per month and up to 3.2 million seconds of compute time per month.</li>
+<li><strong>Beyond Free Tier:</strong> Charged based on number of requests and compute time.</li>
+</ul>
+<p><strong>Ideal Use Cases:</strong></p>
+<ul>
+<li>Already invested in the AWS ecosystem.</li>
+<li>High control and extensive tooling options.</li>
+<li>Need for a large variety of services and integrations.</li>
+</ul>
+<h3>Google Cloud Functions</h3>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Languages Supported:</strong> Node.js, Python, Go, Java, .NET, Ruby, PHP.</li>
+<li><strong>Integration:</strong> Tight integration with Google Cloud services (e.g., Cloud Pub/Sub, Firestore).</li>
+<li><strong>Event Triggering:</strong> Can trigger from various GCP services or HTTPS requests.</li>
+</ul>
+<p><strong>Pricing:</strong></p>
+<ul>
+<li><strong>Free Tier:</strong> 2 million function invocations per month with some free compute time.</li>
+<li><strong>Beyond Free Tier:</strong> Pay for compute time and requests.</li>
+</ul>
+<p><strong>Ideal Use Cases:</strong></p>
+<ul>
+<li>Organizations already using Google Cloud.</li>
+<li>Integrations with GCP services like BigQuery, Cloud Storage.</li>
+</ul>
+<h3>Microsoft Azure Functions</h3>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Languages Supported:</strong> C#, Java, JavaScript (Node.js), Python, PowerShell, TypeScript, Go (via custom handlers).</li>
+<li><strong>Integration:</strong> Seamless integration with Azure ecosystem (e.g., Blob Storage, Event Hubs, Service Bus).</li>
+<li><strong>Development Tools:</strong> Visual Studio, Visual Studio Code, and Azure CLI support.</li>
+</ul>
+<p><strong>Pricing:</strong></p>
+<ul>
+<li><strong>Free Tier:</strong> 1 million requests and 400,000 GB-seconds of resource consumption per month.</li>
+<li><strong>Beyond Free Tier:</strong> Pay as you go, based on consumption.</li>
+</ul>
+<p><strong>Ideal Use Cases:</strong></p>
+<ul>
+<li>Existing Microsoft/Azure environment.</li>
+<li>Strong preference for .NET ecosystem and related tooling.</li>
+</ul>
+<h3>Netlify Functions</h3>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Languages Supported:</strong> Primarily Node.js (using AWS Lambda under the hood).</li>
+<li><strong>Integration:</strong> Smoothly integrated with Netlify’s static site hosting and builds.</li>
+<li><strong>Simplicity:</strong> Straightforward deployment from Git repositories.</li>
+</ul>
+<p><strong>Pricing:</strong></p>
+<ul>
+<li><strong>Free Tier:</strong> Generous free tier of function execution minutes.</li>
+<li><strong>Beyond Free Tier:</strong> Pay for additional usage.</li>
+</ul>
+<p><strong>Ideal Use Cases:</strong></p>
+<ul>
+<li>JAMstack sites deployed on Netlify.</li>
+<li>Quick and easy setup without needing to manage separate cloud accounts.</li>
+<li>Smaller projects or prototypes where ease of integration with static hosting is key.</li>
+</ul>
+<h3>Comparison Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Integration Ecosystem</th>
+<th>Language Support</th>
+<th>Tooling &amp; Ecosystem Maturity</th>
+<th>Free Tier Generosity</th>
+<th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS Lambda</td>
+<td>AWS Services</td>
+<td>Broad</td>
+<td>Very Mature</td>
+<td>Generous</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>GCF (Google)</td>
+<td>GCP Services</td>
+<td>Broad</td>
+<td>Mature</td>
+<td>Generous</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Azure Functions</td>
+<td>Azure Services</td>
+<td>Broad, strong .NET support</td>
+<td>Mature</td>
+<td>Generous</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Netlify Functions</td>
+<td>Netlify’s JAMstack</td>
+<td>Primarily Node.js</td>
+<td>Simpler, less complex</td>
+<td>Generous</td>
+<td>Very Simple</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>My Choice for Hosting the New Function:</strong><br>
+I will choose <strong>Netlify Functions</strong>. The reason is that it provides a very straightforward developer experience, especially if I’m already hosting a website on Netlify. For a small project or a new function that might integrate with a JAMstack site, this is simple and cost-effective. The free tier is generous enough to get started without worrying about initial costs or complexity.</p>
+<hr>
+<h1>E-mail Sending Services Comparison</h1>
+<h2>Overview</h2>
+<p>Many web applications need to send transactional or marketing emails. Several third-party providers offer APIs and tools to handle delivery, ensuring better reliability and deliverability than sending directly via SMTP. Below is a comparison of popular services.</p>
+<h3>SendGrid</h3>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Focus:</strong> Transactional and marketing emails.</li>
+<li><strong>Integration:</strong> RESTful API, SMTP relay.</li>
+<li><strong>Analytics &amp; Deliverability Tools:</strong> Comprehensive dashboards, event tracking, A/B testing.</li>
+<li><strong>Pricing:</strong> Has a free tier (up to 100 emails/day), then scales as you need more volume.</li>
+</ul>
+<h3>Mailgun</h3>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Focus:</strong> Transactional emails, developer-friendly API.</li>
+<li><strong>Integration:</strong> RESTful API, SMTP, good documentation.</li>
+<li><strong>Deliverability Tools:</strong> Email validation, reputation metrics, detailed logs.</li>
+<li><strong>Pricing:</strong> Offers a free trial (first 5,000 emails free for three months), then pay-per-use.</li>
+</ul>
+<h3>Mailchimp Transactional (Mandrill)</h3>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Focus:</strong> Primarily marketing campaigns and newsletters, with a separate service (Mandrill) for transactional emails.</li>
+<li><strong>Integration:</strong> Powerful marketing automation suite, segmentation tools.</li>
+<li><strong>Deliverability Tools:</strong> Built-in templates, analytics.</li>
+<li><strong>Pricing:</strong> Generally paid; Mandrill credits cost extra and requires a Mailchimp plan.</li>
+</ul>
+<p><strong>Key Differences:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Focus</th>
+<th>Pricing Model</th>
+<th>Free Tier Availability</th>
+<th>Notable Strengths</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SendGrid</td>
+<td>Both transactional &amp; marketing</td>
+<td>Free tier (100 emails/day), then pay as you grow</td>
+<td>Yes, with daily limit</td>
+<td>Robust API, strong analytics, easy integration</td>
+</tr>
+<tr>
+<td>Mailgun</td>
+<td>Primarily transactional</td>
+<td>Free trial (limited time), then pay-per-use</td>
+<td>Limited trial</td>
+<td>Developer-friendly, good for pure transactional</td>
+</tr>
+<tr>
+<td>Mailchimp</td>
+<td>Primarily marketing campaigns &amp; newsletters (Mandrill for transactional)</td>
+<td>Requires a paid plan + credits for Mandrill</td>
+<td>No permanent free tier (some free mailing for small lists)</td>
+<td>Great for marketing automation, segmentation, and design tools</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>My Choice for E-mail Sending Service:</strong>
+I will choose <strong>SendGrid</strong>. It provides a straightforward free tier, allowing me to send up to 100 emails per day, which is usually enough to start for development or small-scale deployments. It’s easy to integrate and scale when needed, plus it offers a good balance of transactional and marketing capabilities.</p>
+<hr>
+<h1>Summary</h1>
+<ul>
+<li><strong>Serverless Provider:</strong> <strong>Netlify Functions</strong> for ease of integration with a frontend on Netlify and a generous free tier.</li>
+<li><strong>Email Sending Service:</strong> <strong>SendGrid</strong> due to its free tier, easy integration, and robust tooling.</li>
+</ul>
+
+      </div>
+    </div>
+    
+    <footer class="footer bg-dark text-center text-white py-4">
+      <div class="container">
+        <p>&copy; Jy Alexander <span id="current-year"></span></p>
+         <p><a href="/terms-and-conditions.html" class="text-white">Terms and Conditions</a></p>
+      </div>
+    </footer>
+    
+    <script>
+      // JavaScript to update the year dynamically
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="/js/splash.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

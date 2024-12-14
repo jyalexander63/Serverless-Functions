@@ -1,0 +1,47 @@
+---
+layout: layouts/default.hbs
+title: Blog Posts
+permalink: blog.html
+---
+<div class="container">
+  <h1 class="text-center mb-5">Blog Posts</h1>
+
+  {{!-- <div class="mb-4 text-center">
+    <a href="/blog/" class="btn btn-primary me-2">All Posts</a>
+    <a href="/blog/labs/" class="btn btn-outline-primary me-2">Lab Write-ups</a>
+    <a href="/blog/tech/" class="btn btn-outline-primary">Tech Articles</a>
+  </div> --}}
+  
+  <div class="row">
+    {{#if collections.strapiPosts}}
+      {{#each collections.strapiPosts as |post|}}
+        <div class="col-md-6 mb-4">
+          <div class="card h-100">
+            {{#if post.featuredImage}}
+              <img src="{{post.featuredImage}}" class="card-img-top" alt="{{post.title}}">
+            {{/if}}
+            <div class="card-body">
+              <h2 class="card-title h5 text-white">{{post.title}}</h2>
+              <div class="mb-2">
+                <span class="badge bg-secondary">{{post.category}}</span>
+              </div>
+              {{#if excerpt}}
+                <p class="card-text">{{post.excerpt}}</p>
+              {{/if}}
+              {{!-- <p class="text-muted small">
+                Published: {{post.date}}
+              </p> --}}
+              {{#if url}}
+                <a href="{{post.url}}" class="btn btn-primary">Read More</a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <div class="col-12">
+        <p class="text-center">No blog posts found.</p>
+      </div>
+    {{/if}}
+  </div>
+</div>

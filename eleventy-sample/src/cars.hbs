@@ -1,0 +1,36 @@
+---
+layout: layouts/default.hbs
+title: Dream Cars Collection
+permalink: cars.html
+---
+<div class="container">
+  <h1 class="text-center mb-5">Dream Cars Collection</h1>
+  
+  <div class="row">
+    {{#if collections.strapiDreamCars}}
+      {{#each collections.strapiDreamCars as |car|}}
+        <div class="col-md-6 mb-4">
+          <div class="card h-100">
+            {{#if car.image}}
+              <img src="{{car.image}}" class="card-img-top" alt="{{car.make}} {{car.model}}">
+            {{/if}}
+            <div class="card-body">
+              <h2 class="card-title h5 text-white">{{car.year}} {{car.make}} {{car.model}}</h2>
+              <div class="mb-2">
+                <span class="badge bg-primary">{{car.price}}</span>
+              </div>
+              {{#if car.description}}
+                <p class="card-text">{{car.description}}</p>
+              {{/if}}
+              <a href="{{car.url}}" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <div class="col-12">
+        <p class="text-center">No dream cars found.</p>
+      </div>
+    {{/if}}
+  </div>
+</div>
